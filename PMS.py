@@ -102,14 +102,14 @@ def main():
             # Upload file and store in the database
             st.header("Add new record")
             vessel = st.text_input("Vessel")
-            cr_summary = st.text_input("CR Summary")
-            cr_reason = st.text_input("CR Reason")
+            cr_summary = st.text_area("CR Summary")
+            cr_reason = st.text_area("CR Reason")
             initiated_by = st.text_input("Initiated By")
             dt_req_raised = st.date_input("Date Request Raised")
             sent_to_MA = st.date_input("Sent to MA")
             date_completed = st.date_input("Date Completed")
             crf = st.file_uploader("CRF File (excel)")
-            mail_thread = st.file_uploader("Mail Thread File")
+            mail_thread = st.file_uploader("Mail Thread File (Outlook message)")
             supporting_docs = st.file_uploader("Supporting Docs")
             job_done_at = st.selectbox("Job Done At",options=('vessel','jobmaster'))
 
