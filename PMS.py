@@ -122,6 +122,7 @@ def main():
                             mail_thread.read() if mail_thread else None, mail_thread_mime_type,
                             supporting_docs.read() if supporting_docs else None, supporting_docs_mime_type,
                             job_done_at)
+                st.write("Record added to Database.")
         with st.expander('Edit existing records'):
             columns_to_hide = ['mail_thread', 'crf', 'supporting_docs', 'crf_mime_type', 'mail_thread_mime_type',
                                'supporting_docs_mime_type']
