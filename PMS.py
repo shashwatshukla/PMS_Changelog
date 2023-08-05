@@ -156,7 +156,7 @@ def main():
         st.header("Delete Data")
         delete_id = st.selectbox("Enter ID to delete:", df['id'].tolist())
         if st.button("Delete"):
-            #delete_data(delete_id)
+            # delete_data(delete_id)
             st.write(f"Record with ID {delete_id} deleted successfully.")
 if __name__ == "__main__":
     main()
