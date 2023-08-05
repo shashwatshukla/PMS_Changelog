@@ -92,7 +92,7 @@ def main():
     create_table()
 
     st.title("Mari Apps PMS changelog")
-    st.header("Change requests")
+    
     df = fetch_data()
 
     # Show the DataFrame and allow editing
@@ -123,7 +123,7 @@ def main():
                             supporting_docs.read() if supporting_docs else None, supporting_docs_mime_type,
                             job_done_at)
                 st.write("Record added to Database.")
-        with st.expander('Edit existing records'):
+            st.header('Edit existing records')
             columns_to_hide = ['mail_thread', 'crf', 'supporting_docs', 'crf_mime_type', 'mail_thread_mime_type',
                                'supporting_docs_mime_type']
 
